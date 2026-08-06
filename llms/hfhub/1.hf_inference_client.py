@@ -1,13 +1,12 @@
-from huggingface_hub import InferenceClient
-import keys
+## Set environment variable - HUGGINGFACE_HUB_TOKEN - to access token 
 
-model_id = "openai/gpt-oss-120b"
-client = InferenceClient(model=model_id, token=keys.HUGGINGFACE_KEY)
+from huggingface_hub import InferenceClient
+
+client = InferenceClient(model="openai/gpt-oss-120b")
 
 messages = [
     {"role": "user", "content": "What is the capital of France?"}
 ]
-
 response = client.chat_completion(messages)
 #print(response)
 print(response.choices[0].message.content)

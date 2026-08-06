@@ -1,7 +1,7 @@
 from typing import TypedDict
-from langchain_ollama import OllamaLLM
+from langchain_ollama import ChatOllama
 
-model = OllamaLLM(model="llama3.2:latest")
+model = ChatOllama(model="llama3.2:latest")
 
 class Country(TypedDict):
     # keys

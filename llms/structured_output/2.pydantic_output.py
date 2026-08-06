@@ -11,7 +11,7 @@ class Country(BaseModel):
 
 model = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
 structured_model = model.with_structured_output(Country)
-output = structured_model.invoke("Provide details of France")
+output = structured_model.invoke("Provide details of Spain")
 
 print(output)   
 print(output.cities)  # Access an object attribute 

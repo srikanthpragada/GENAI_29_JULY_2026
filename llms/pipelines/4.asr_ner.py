@@ -13,7 +13,7 @@ audio_path = "./pipelines/mlk_speech.mp3"
 result = asr(audio_path, return_timestamps=True)
 
 # Print the transcription
-# print("Transcription:", result["text"] )
+print("Transcription:\n", result["text"], "\n\n")
 
 context = result["text"]
 

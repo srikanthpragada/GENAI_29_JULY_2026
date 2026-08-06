@@ -2,7 +2,7 @@ from typing import TypedDict
 from langchain.chat_models import init_chat_model
 
 class Country(TypedDict):
-    # keys
+    # key names and data types
     name : str 
     population : int 
     capital : str 
