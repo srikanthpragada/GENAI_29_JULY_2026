@@ -16,6 +16,7 @@ while True:
     messages.append(HumanMessage(content=prompt))
     response = model.invoke(messages)
     print(response.content)
+    print('-' * 50)
     print(f'Total Tokens : {response.usage_metadata["total_tokens"]}')
    
     
