@@ -2,7 +2,7 @@ from langchain.chat_models import init_chat_model
 from pydantic import BaseModel 
 
 class Country(BaseModel):
-    #Attributes 
+    # Instance or object Attributes 
     name : str 
     population : int 
     capital : str 
