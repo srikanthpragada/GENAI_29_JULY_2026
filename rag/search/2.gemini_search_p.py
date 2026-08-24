@@ -24,7 +24,7 @@ if os.path.exists(folder_path):
 else:
     db = FAISS.from_documents(docs, embeddings_model)
     print('Created FAISS index')
-    db.save_local(folder_path)
+    db.save_local(folder_path)   # Serialization
 
 query = "What uses neural networks?"
 results = db.similarity_search(query, k=2)

@@ -1,5 +1,8 @@
 # Load document from Text File
 
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from langchain_community.document_loaders.text import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
