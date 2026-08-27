@@ -19,9 +19,9 @@ def multiply(a: int, b: int) -> int:
 tools = [add, multiply]
 llm_with_tools = llm.bind_tools(tools)
 
-query = "Add 10 and 20 and then multiply it with 40"
+#query = "Add 10 and 20 and then multiply it with 40"
 #query = "Add 10 and 20, multiply 20 and 40"
-#query = "What is the capital of Spain"
+query = "What is the capital of Spain"
 
 
 messages = [
