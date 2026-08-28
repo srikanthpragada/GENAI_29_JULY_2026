@@ -21,8 +21,8 @@ model = init_chat_model("gpt-5-nano", model_provider="openai")
 system_message = SystemMessage(
     "You are a helpful weather assistant.If needed, find out latitude and logitude then provide them to tool. "
 )
-#user_message = HumanMessage("What is the weather in Chicago")
-user_message = HumanMessage("What is the capital of Australia")
+user_message = HumanMessage("What is the weather in Chicago")
+#user_message = HumanMessage("What is the capital of Australia")
 
 messages = [system_message, user_message]
 
