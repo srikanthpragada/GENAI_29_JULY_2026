@@ -19,6 +19,11 @@ config = {"configurable": {"thread_id": "1"}}
 human_message = HumanMessage("Hi, I'm Srikanth and I live in Visakhapatnam.")
 response = agent.invoke({"messages": [human_message]}, config=config)
 
+for message in response["messages"]:
+    message.pretty_print()
+
+print('-'  * 50, "\n\n")
+
 human_message = HumanMessage("Search for the weather where I live")
 response = agent.invoke({"messages": [human_message]}, config=config)
 

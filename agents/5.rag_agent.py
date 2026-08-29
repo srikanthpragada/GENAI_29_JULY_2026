@@ -7,7 +7,7 @@ import json
 
 @tool()
 def search(name : str) -> list[dict]:
-    """Search for a product with the given name and return details as list[dict]
+    """Search for products with the given name and return details as list[dict]
 
     Args:
         name : str
@@ -29,9 +29,10 @@ def search(name : str) -> list[dict]:
 model = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
 tools = [search]
 
-agent = create_agent(model, tools)
+agent = create_agent(model, tools, 
+                     system_prompt='Use the same currency as in the data for output without any conversion')
 
-human_message = HumanMessage("Get me prices of all mouse")
+human_message = HumanMessage("Get me prices of all mouse products")
 
 # Invoke agent
 response = agent.invoke({"messages": [human_message]})
