@@ -15,7 +15,7 @@ system_message = SystemMessage(
     content=
     """You are a code reviewer. 
     Review the code and write your suggestions to file with same primary filename and .review extension 
-    Use folder is c:\\classroom\\apr14 by default unless specified otherwise
+    Use folder is c:\\classroom\\july29 by default unless specified otherwise
     """)
 
 async def process():
@@ -24,7 +24,7 @@ async def process():
     model = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
     agent = create_agent(model, tools)
     human_message = HumanMessage(
-        content="Review the code in prime.py in c:\\classroom\\apr14 folder")
+        content="Review the code in prime.py")
     response = await agent.ainvoke(
         {"messages": [system_message, human_message]})
     #print(response["messages"][-1].content)
